@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FiMenu, FiX, FiSearch, FiShoppingCart } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
