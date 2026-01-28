@@ -1,0 +1,25 @@
+.pulse-container {
+  width: auto;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.pulse-image {
+  border-radius: 12px;
+  animation: heartbeat 3s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
