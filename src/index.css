@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('src/assets/weddingToGo.jpg');
+  background-image: url('assets/weddingToGo.jpg');
   background-size: cover;
   background-position: center;
 }
