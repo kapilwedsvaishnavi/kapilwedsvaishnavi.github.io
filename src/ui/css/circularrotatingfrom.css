@@ -1,0 +1,12 @@
+.spin-slow {
+  animation: spinSlow 90s linear infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

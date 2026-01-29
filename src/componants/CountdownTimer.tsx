@@ -9,7 +9,7 @@ function CountdownTimer() {
     return <h1>Congratulations</h1>;
   } else {
     // Render a countdown
-    return <div className='grid grid-cols-2 gap-10 md:grid-cols-2 md:gap-2 lg:grid-cols-4 lg:gap-20'>
+    return <div className='grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-2 lg:grid-cols-4 lg:gap-20'>
       <TimerFrame heading={`${days}`} subheading="Days" />
       <TimerFrame heading={`${hours}`} subheading="Hours" />
       <TimerFrame heading={`${minutes}`} subheading="Minutes" />
@@ -20,7 +20,7 @@ function CountdownTimer() {
 };
 
   return (
-    <section className='countdown_section w-full flex place-items-center justify-center flex-col'><Countdown date={'2026-03-14T07:00:00'} renderer={renderer} /></section> 
+    <section className='countdown_section w-full flex place-items-center justify-center flex-col' id='countdown'><Countdown date={'2026-03-14T07:00:00'} renderer={renderer} /></section> 
   )
 }
 

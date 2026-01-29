@@ -34,8 +34,14 @@ body {
 
 .countdown_section {
   margin: 0;
-  width: '100%';
-  min-height: 60vh;
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.couple_section {
+  margin: 0;
+  width: 100%;
+  padding: 5rem 0;
 }
 
 .timerframe {
@@ -46,7 +52,4 @@ body {
 
 .playwrite-au-tas-wedding {
   font-family: "Playwrite AU TAS", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }

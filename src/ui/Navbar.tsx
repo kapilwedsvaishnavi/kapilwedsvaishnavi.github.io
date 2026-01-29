@@ -27,7 +27,7 @@ export default function Navbar() {
         <h1 className="text-3xl font-serif text-green-700 playwrite-au-tas-wedding">Shubhmangal</h1>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8 font-semibold">
+        <ul className="hidden lg:flex items-center gap-8 font-semibold">
           <li><a href="#" className="text-black hover:text-green-700">HOME</a></li>
           <li><a href="#" className="text-black hover:text-green-700">COUPLE</a></li>
           <li><a href="#" className="text-black hover:text-green-700">STORY</a></li>
@@ -42,7 +42,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-3xl"
+          className="lg:hidden text-3xl"
           onClick={() => setOpen(!open)}
         >
           {open ? <FiX color="black"/> : <FiMenu color="black"/>}
@@ -51,14 +51,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="lg:hidden bg-white shadow-md absolute w-full left-0 top-16 px-4 py-4">
           <ul className="flex flex-col text-center py-4 space-y-4 font-semibold">
-            <li><a href="#" className="text-black hover:text-green-700">HOME</a></li>
-            <li><a href="#" className="text-black hover:text-green-700">COUPLE</a></li>
-            <li><a href="#" className="text-black hover:text-green-700">STORY</a></li>
-            <li><a href="#" className="text-black hover:text-green-700">RSVP</a></li>
-            <li><a href="#" className="text-black hover:text-green-700">EVENTS</a></li>
-            <li><a href="#" className="text-black hover:text-green-700">BLOG</a></li>
+            <li><a href="#header" className="text-black hover:text-green-700">HOME</a></li>
+            <li><a href="#couple" className="text-black hover:text-green-700">COUPLE</a></li>
+            <li><a href="#story" className="text-black hover:text-green-700">STORY</a></li>
+            <li><a href="#rsvp" className="text-black hover:text-green-700">RSVP</a></li>
+            <li><a href="#events" className="text-black hover:text-green-700">EVENTS</a></li>
+            <li><a href="#blog" className="text-black hover:text-green-700">BLOG</a></li>
           </ul>
         </div>
       )}
