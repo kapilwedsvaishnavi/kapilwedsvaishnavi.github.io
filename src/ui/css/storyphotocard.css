@@ -1,0 +1,12 @@
+.diagonal-drift {
+  animation: drift 6s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 10px); /* slight diagonal movement */
+  }
+}

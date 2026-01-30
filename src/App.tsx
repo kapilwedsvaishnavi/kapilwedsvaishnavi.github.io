@@ -1,6 +1,7 @@
 import Header from './componants/Header';
 import CountdownTimer from './componants/CountdownTimer';
 import Couple from './componants/Couple';
+import OurStory from './componants/OurStory';
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <CountdownTimer/>
       <Couple />
+      <OurStory />
     </main>
   )
 }
