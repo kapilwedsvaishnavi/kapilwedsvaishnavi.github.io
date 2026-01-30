@@ -28,12 +28,12 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-8 font-semibold">
-          <li><a href="#" className="text-black hover:text-green-700">HOME</a></li>
-          <li><a href="#" className="text-black hover:text-green-700">COUPLE</a></li>
-          <li><a href="#" className="text-black hover:text-green-700">STORY</a></li>
-          <li><a href="#" className="text-black hover:text-green-700">RSVP</a></li>
-          <li><a href="#" className="text-black hover:text-green-700">EVENTS</a></li>
-          <li><a href="#" className="text-black hover:text-green-700">BLOG</a></li>
+          <li><a href="#header" className="text-black hover:text-green-700">HOME</a></li>
+          <li><a href="#couple" className="text-black hover:text-green-700">COUPLE</a></li>
+          <li><a href="#story" className="text-black hover:text-green-700">STORY</a></li>
+          <li><a href="#rsvp" className="text-black hover:text-green-700">RSVP</a></li>
+          <li><a href="#events" className="text-black hover:text-green-700">EVENTS</a></li>
+          <li><a href="#blog" className="text-black hover:text-green-700">BLOG</a></li>
         </ul>
 
         {/* Icons */}
@@ -51,14 +51,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-white shadow-md absolute w-full left-0 top-16 px-4 py-4">
+        <div className="lg:hidden bg-white shadow-md absolute w-full left-0 top-16 px-4 py-4 z-20">
           <ul className="flex flex-col text-center py-4 space-y-4 font-semibold">
-            <li><a href="#header" className="text-black hover:text-green-700">HOME</a></li>
-            <li><a href="#couple" className="text-black hover:text-green-700">COUPLE</a></li>
-            <li><a href="#story" className="text-black hover:text-green-700">STORY</a></li>
-            <li><a href="#rsvp" className="text-black hover:text-green-700">RSVP</a></li>
-            <li><a href="#events" className="text-black hover:text-green-700">EVENTS</a></li>
-            <li><a href="#blog" className="text-black hover:text-green-700">BLOG</a></li>
+            <li onClick={() => setOpen(false)}><a href="#header" className="text-black hover:text-green-700">HOME</a></li>
+            <li onClick={() => setOpen(false)}><a href="#couple" className="text-black hover:text-green-700">COUPLE</a></li>
+            <li onClick={() => setOpen(false)}><a href="#story" className="text-black hover:text-green-700">STORY</a></li>
+            <li onClick={() => setOpen(false)}><a href="#rsvp" className="text-black hover:text-green-700">RSVP</a></li>
+            <li onClick={() => setOpen(false)}><a href="#events" className="text-black hover:text-green-700">EVENTS</a></li>
+            <li onClick={() => setOpen(false)}><a href="#blog" className="text-black hover:text-green-700">BLOG</a></li>
           </ul>
         </div>
       )}

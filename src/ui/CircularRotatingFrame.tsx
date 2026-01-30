@@ -12,7 +12,7 @@ const CircularRotatingFrame: React.FC<CircularRotatingFrameProps> = ({
 }) => {
   return (
     <div
-      className="relative flex items-center justify-center lg:w-[550px] lg:h-[550px] md:w-[450px] md:h-[450px] w-[300px] h-[300px] m-6"
+      className="relative flex items-center justify-center lg:w-[550px] lg:h-[550px] md:w-[450px] md:h-[450px] w-[300px] h-[300px] m-6 overflow-hidden" 
     >
       {/* Rotating circular frame */}
       <img
