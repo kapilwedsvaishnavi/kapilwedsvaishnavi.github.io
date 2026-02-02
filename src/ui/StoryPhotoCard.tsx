@@ -9,7 +9,7 @@ interface StoryPhotoCardProps {
 const StoryPhotoCard: React.FC<StoryPhotoCardProps> = ({image, floater, floterSide = 'right-50'}) =>   {
   return (
     //a photo card component
-    <div style={{width: '300px'}} className="relative story-photo-card border-1 border-green-500">
+    <div className="relative story-photo-card border-1 border-green-500">
       <div className='border border-green-500 absolute w-full h-full rotate-4'/>
       <img
         src={image}
