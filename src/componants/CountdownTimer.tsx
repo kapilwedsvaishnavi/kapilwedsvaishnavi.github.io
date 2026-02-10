@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Countdown from "react-countdown";
 import TimerFrame from "../ui/TimerFrame";
 import { motion, useInView } from "framer-motion";
