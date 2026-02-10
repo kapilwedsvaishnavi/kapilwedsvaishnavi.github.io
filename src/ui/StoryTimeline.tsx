@@ -33,15 +33,15 @@ const timelineItems: TimelineItemProps[] = [
         floaterSide: 'right-50',
         date: "04 Feb, 2024",
         header: "How We Met",
-        detail: "The universe worked quietly in the background a small shift in the stars, a gentle help from the algorithm bringing two lives closer until they finally met."
+        detail: "The universe worked quietly in the background a small shift in the stars, two lives came closer until they finally met."
     },
     {
         image: Timeline_img_2,
         floater: Timeline_flower_2,
         floaterSide: 'left-50',
         date: "11 Oct, 2024",
-        header: "The Wedding",
-        detail: "Our wedding was a beautiful celebration of love."
+        header: "The Decision",
+        detail: "Together, we reached the same decision of the heart to choose each other, and to choose forever."
     },
     {
         image: Timeline_img_3,
@@ -49,7 +49,7 @@ const timelineItems: TimelineItemProps[] = [
         floaterSide: 'right-50',
         date: "20 Nov, 2025",
         header: "It now officially",
-        detail: "We are now living our new life together."
+        detail: "The date found its place on the calendar, and the preparations began to hum with quiet excitement."
     }
 ];
 
@@ -59,7 +59,7 @@ export default function StoryTimeline() {
         (
             <TimelineItem>
                 <TimelineOppositeContent sx={{ width: '150px', py: '12px', px: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <StoryPhotoCard image={image} floater={floater} floterSide={floaterSide}/>
+                    <StoryPhotoCard image={image} floater={floater} floterSide={floaterSide} direction='left'/>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector />
@@ -67,7 +67,7 @@ export default function StoryTimeline() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ width: '750px', py: '12px', px: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <StoryCard date={date} header={header} detail={detail} />
+                    <StoryCard date={date} header={header} detail={detail} direction='right'/>
                 </TimelineContent>
             </TimelineItem>
         )
@@ -98,8 +98,8 @@ export default function StoryTimeline() {
             <div className='lg:hidden flex flex-col justify-center items-center justify-items-center'>
                 {timelineItems.map((item, index) => (
                     <div key={index} className='md:w-[50%] mb-12 gap-5 flex flex-col justify-center items-center'>
-                        <StoryPhotoCard image={item.image} floater={item.floater} />
-                        <StoryCard date={item.date} header={item.header} detail={item.detail} />
+                        <StoryPhotoCard image={item.image} floater={item.floater} direction='down'/>
+                        <StoryCard date={item.date} header={item.header} detail={item.detail} direction='down'/>
                     </div>
                 ))}
             </div>

@@ -56,6 +56,12 @@ body {
   padding: 5rem 0;
 }
 
+.event_section {
+  margin: 0;
+  width: 100%;
+  padding: 5rem 0;
+}
+
 .timerframe {
   background-image: url('assets/timer-frame.png');
   background-size: cover;
