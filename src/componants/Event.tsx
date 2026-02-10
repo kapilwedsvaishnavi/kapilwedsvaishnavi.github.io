@@ -4,7 +4,7 @@ const EventDetails = [
     {
     heading: 'The Engagement',
     date: 'Saturday, 14 March. 2026',
-    time: '8.30.00 Am to 9.30 Am',
+    time: '8.30 Am to 9.30 Am',
     address: 'Shree Haripriya Sabhagruha, Datar Farms, Sinhgad Rd, behind Navshya Maruti Mandir Lane, Sarita Vihar Phase 2, Dattawadi, Pune, Maharashtra 411030',
     location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28'
     },
