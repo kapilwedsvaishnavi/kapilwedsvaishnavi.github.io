@@ -32,24 +32,31 @@ const timelineItems: TimelineItemProps[] = [
         floater: Timeline_flower_1,
         floaterSide: 'right-50',
         date: "04 Feb, 2024",
-        header: "How We Met",
-        detail: "The universe worked quietly in the background a small shift in the stars, two lives came closer until they finally met."
+        header: "💛How We Met",
+        detail: `It started with a simple hello.
+                What began as casual conversations slowly turned into something we both looked forward to every day.
+                Without any big moment or drama, we simply found comfort in each other — and that’s how it all began.`
     },
     {
         image: Timeline_img_2,
         floater: Timeline_flower_2,
         floaterSide: 'left-50',
         date: "11 Oct, 2024",
-        header: "The Decision",
-        detail: "Together, we reached the same decision of the heart to choose each other, and to choose forever."
+        header: "💍The Decision",
+        detail: `There wasn’t confusion.
+                There wasn’t doubt.
+                Just two hearts that knew this felt right.
+                So we chose each other — not just for a moment, but for life`
     },
     {
         image: Timeline_img_3,
         floater: Timeline_flower_3,
         floaterSide: 'right-50',
         date: "20 Nov, 2025",
-        header: "It now officially",
-        detail: "The date found its place on the calendar, and the preparations began to hum with quiet excitement."
+        header: "✨ It’s Now Official",
+        detail: `With our families’ blessings and hearts full of excitement,
+                we finally set the date.
+                What started as “us” is now becoming “forever.”`
     }
 ];
 
