@@ -33,7 +33,6 @@ export default function Navbar() {
           <li><a href="#story" className="text-black hover:text-green-700">STORY</a></li>
           <li><a href="#rsvp" className="text-black hover:text-green-700">RSVP</a></li>
           <li><a href="#events" className="text-black hover:text-green-700">EVENTS</a></li>
-          <li><a href="#blog" className="text-black hover:text-green-700">BLOG</a></li>
         </ul>
 
         {/* Icons */}
