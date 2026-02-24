@@ -2,6 +2,7 @@ import { useRef } from "react";
 import Countdown from "react-countdown";
 import TimerFrame from "../ui/TimerFrame";
 import { motion, useInView } from "framer-motion";
+import { strings } from "../helper/strings";
 
 interface CountdownTimerProps {
   direction?: "left" | "right" | "up" | "down" | "bottom";
@@ -9,6 +10,8 @@ interface CountdownTimerProps {
 
 function CountdownTimer({ direction = "bottom" }: CountdownTimerProps) {
   const ref = useRef(null);
+
+  const CountdownTimeText = strings.countdownTimeText
 
   const isInView = useInView(ref, {
     once: true,
@@ -30,10 +33,10 @@ function CountdownTimer({ direction = "bottom" }: CountdownTimerProps) {
     } else {
       return (
         <div className="grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-2 lg:grid-cols-4 lg:gap-20">
-          <TimerFrame heading={`${days}`} subheading="Days" />
-          <TimerFrame heading={`${hours}`} subheading="Hours" />
-          <TimerFrame heading={`${minutes}`} subheading="Minutes" />
-          <TimerFrame heading={`${seconds}`} subheading="Seconds" />
+          <TimerFrame heading={`${days}`} subheading={CountdownTimeText.day} />
+          <TimerFrame heading={`${hours}`} subheading={CountdownTimeText.hours} />
+          <TimerFrame heading={`${minutes}`} subheading={CountdownTimeText.minutes} />
+          <TimerFrame heading={`${seconds}`} subheading={CountdownTimeText.seconds} />
         </div>
       );
     }

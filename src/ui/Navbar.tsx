@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { strings } from "../helper/strings";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const NavbarDetails = strings.navBarDetails;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,17 +24,19 @@ export default function Navbar() {
       `}
     >
       <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-        
+
         {/* Logo */}
-        <h1 className="text-3xl font-serif text-green-700 playwrite-au-tas-wedding">Shubhmangal</h1>
+        <h1 className="text-3xl font-serif text-green-700 playwrite-au-tas-wedding">{NavbarDetails.siteHeader}</h1>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-8 font-semibold">
-          <li><a href="#header" className="text-black hover:text-green-700">HOME</a></li>
-          <li><a href="#couple" className="text-black hover:text-green-700">COUPLE</a></li>
-          <li><a href="#story" className="text-black hover:text-green-700">STORY</a></li>
-          <li><a href="#rsvp" className="text-black hover:text-green-700">RSVP</a></li>
-          <li><a href="#events" className="text-black hover:text-green-700">EVENTS</a></li>
+          {NavbarDetails.menu.map((item) => (
+            <li key={item.href}>
+              <a href={item.href} className="text-black hover:text-green-700">
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         {/* Icons */}
@@ -44,7 +48,7 @@ export default function Navbar() {
           className="lg:hidden text-3xl"
           onClick={() => setOpen(!open)}
         >
-          {open ? <FiX color="black"/> : <FiMenu color="black"/>}
+          {open ? <FiX color="black" /> : <FiMenu color="black" />}
         </button>
       </div>
 

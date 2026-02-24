@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import kapil_vaishnavi from "../assets/kapi-vaishnavi.jpeg";
+import { strings } from "../helper/strings";
 
    const serviceID = 'default_service';
    const templateID = 'template_wejasdd';
@@ -11,6 +12,8 @@ const Rsvp = () => {
   const [status, setStatus] = useState<{ type: string; msg: string } | null>(
     null
   );
+
+  const RsvpText = strings.rsvpText;
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,13 +29,13 @@ const Rsvp = () => {
       )
       .then(
         () => {
-          setStatus({ type: "success", msg: "Thank you! Your RSVP is submitted." });
+          setStatus({ type: "success", msg: RsvpText.success_msg });
           formRef.current?.reset();
         },
         () => {
           setStatus({
             type: "error",
-            msg: "Something went wrong. Please try again.",
+            msg: RsvpText.error_msg,
           });
         }
       );
@@ -50,7 +53,7 @@ const Rsvp = () => {
             className="flex flex-col gap-4 border border-green-500 p-6 w-full"
           >
             <h2 className="text-2xl font-serif text-green-500 mb-4 playwrite-au-tas-wedding">
-              Are you attending our wedding?
+              {RsvpText.heading}
             </h2>
 
             <div className="relative z-0 w-full mb-5 group text-green-500">
@@ -62,7 +65,7 @@ const Rsvp = () => {
                 required
               />
               <label className="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10">
-                Name
+                {RsvpText.name_lable}
               </label>
             </div>
 
@@ -75,7 +78,7 @@ const Rsvp = () => {
                 required
               />
               <label className="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10">
-                Email
+                {RsvpText.email_lable}
               </label>
             </div>
 
@@ -85,10 +88,10 @@ const Rsvp = () => {
                   type="radio"
                   className="form-radio text-green-500"
                   name="attendance"
-                  value="Yes, I will attend"
+                  value={RsvpText.yes_text}
                   required
                 />
-                <span className="ml-2">Yes, I will attend</span>
+                <span className="ml-2">{RsvpText.yes_text}</span>
               </label>
 
               <label className="inline-flex items-center">
@@ -96,10 +99,10 @@ const Rsvp = () => {
                   type="radio"
                   className="form-radio text-green-500"
                   name="attendance"
-                  value="No, I can't make it"
+                  value={RsvpText.no_text}
                   required
                 />
-                <span className="ml-2">No, I can't make it</span>
+                <span className="ml-2">{RsvpText.no_text}</span>
               </label>
             </div>
 
@@ -107,7 +110,7 @@ const Rsvp = () => {
               type="submit"
               className="m-auto w-30 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
             >
-              RSVP
+              {RsvpText.rsvp_text}
             </button>
 
             {/* STATUS MESSAGE */}
