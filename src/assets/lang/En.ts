@@ -6,6 +6,10 @@ import Timeline_flower_1 from '../timeline-flower-1.png';
 import Timeline_flower_2 from '../timeline-flower-2.png';
 import Timeline_flower_3 from '../timeline-flower-3.png';
 
+
+import kapil_patrika from '../kapil-patrika.jpeg';
+import vaishnavi_patrika from '../vaishnavi-patrika.jpeg';
+
 export default {
     navBarDetails: {
         siteHeader: `Shubhamangala`,
@@ -50,21 +54,24 @@ export default {
             date: 'Saturday, 14 March. 2026',
             time: '8.30 Am to 9.30 Am',
             address: 'Shree Haripriya Sabhagruha, Datar Farms, Sinhgad Rd, behind Navshya Maruti Mandir Lane, Sarita Vihar Phase 2, Dattawadi, Pune, Maharashtra 411030',
-            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28'
+            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28',
+            invitationCardUrl: vaishnavi_patrika
         },
         {
             heading: 'The Wedding',
             date: 'Saturday, 14 March. 2026',
             time: '12.40 PM',
             address: 'Shree Haripriya Sabhagruha, Datar Farms, Sinhgad Rd, behind Navshya Maruti Mandir Lane, Sarita Vihar Phase 2, Dattawadi, Pune, Maharashtra 411030',
-            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28'
+            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28',
+            invitationCardUrl: vaishnavi_patrika
         },
         {
             heading: 'The Reception',
             date: 'Monday, 16 March 2026',
             time: '7.00 Pm to 10 Pm',
             address: 'Mali Lawans, Shri Ram Housing Society, Bhusawal, Maharashtra 425201',
-            location: 'https://maps.app.goo.gl/i9NgoEnpW9Hw8J9E6'
+            location: 'https://maps.app.goo.gl/i9NgoEnpW9Hw8J9E6',
+            invitationCardUrl: kapil_patrika
         },
     ],
 

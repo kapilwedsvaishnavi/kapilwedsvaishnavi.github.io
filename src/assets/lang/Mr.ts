@@ -6,6 +6,9 @@ import Timeline_flower_1 from '../timeline-flower-1.png';
 import Timeline_flower_2 from '../timeline-flower-2.png';
 import Timeline_flower_3 from '../timeline-flower-3.png';
 
+import kapil_patrika from '../kapil-patrika.jpeg';
+import vaishnavi_patrika from '../vaishnavi-patrika.jpeg';
+
 export default {
     navBarDetails: {
         siteHeader: `शुभमंगल`,
@@ -51,7 +54,8 @@ export default {
             time: 'सकाळी ८:३० ते ९:३०',
             address:
                 'श्री हरिप्रिया सभागृह, दातार फार्म्स, सिंहगड रोड, नवस्मरणी मारुती मंदिर लेनच्या मागे, सरिता विहार फेज २, दत्तवाडी, पुणे, महाराष्ट्र ४११०३०',
-            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28'
+            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28',
+            invitationCardUrl: vaishnavi_patrika
         },
         {
             heading: 'लग्न समारंभ',
@@ -59,7 +63,8 @@ export default {
             time: 'दुपारी १२:४०',
             address:
                 'श्री हरिप्रिया सभागृह, दातार फार्म्स, सिंहगड रोड, नवस्मरणी मारुती मंदिर लेनच्या मागे, सरिता विहार फेज २, दत्तवाडी, पुणे, महाराष्ट्र ४११०३०',
-            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28'
+            location: 'https://maps.app.goo.gl/En3jUJW2ivB9ZBW28',
+            invitationCardUrl: vaishnavi_patrika
         },
         {
             heading: 'रिसेप्शन',
@@ -67,7 +72,8 @@ export default {
             time: 'सायं. ७:०० ते १०:००',
             address:
                 'माळी लॉन्स, श्रीराम हौसिंग सोसायटी, भुसावळ, महाराष्ट्र ४२५२०१',
-            location: 'https://maps.app.goo.gl/i9NgoEnpW9Hw8J9E6'
+            location: 'https://maps.app.goo.gl/i9NgoEnpW9Hw8J9E6',
+            invitationCardUrl: kapil_patrika
         }
     ],
 
