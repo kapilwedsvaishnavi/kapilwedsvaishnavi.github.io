@@ -50,6 +50,7 @@ function App() {
                   transition-all duration-
                   cursor-pointer
                   z-20
+                  hidden
                 "
       >
         {curLang.toUpperCase()}
