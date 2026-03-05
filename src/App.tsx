@@ -6,6 +6,7 @@ import Rsvp from './componants/Rsvp';
 import Event from './componants/Event';
 import Footer from './componants/Footer';
 import { useState, useEffect } from 'react';
+import FallingPetals from './ui/FallingPetals';
 
 function App() {
     // hard-coded initial value
@@ -28,6 +29,7 @@ function App() {
   return (
     <main className="App">
       <Header />
+      <FallingPetals />
       <CountdownTimer />
       <Couple />
       <OurStory />
