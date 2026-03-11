@@ -26,13 +26,15 @@ export default {
         subHeading: `आमचा विवाह १४ मार्च २०२६ रोजी आहे`,
         vaishnavi_name: `वैष्णवी वीरकर`,
         kapil_name: `कपिल खुरसडे`,
+        congratulationsMessage: `आमच्या लग्नाला तुमचं स्वागत आहे!`
     },
 
     countdownTimeText: {
         day: 'दिवस',
         hours: 'तास',
         minutes: 'मिनिटे',
-        seconds: 'सेकंद'
+        seconds: 'सेकंद',
+        countdownCompletedMessage: 'आमच्या लग्नाला तुमचं स्वागत आहे!'
     },
 
     coupleDetails: {

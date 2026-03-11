@@ -1,6 +1,7 @@
 import Timeline_img_1 from '../Timeline-img-1.png';
 import Timeline_img_2 from '../Timeline-img-2.png';
 import Timeline_img_3 from '../Timeline-img-3.png';
+import Timeline_img_4 from '../Timeline-img-4.png';
 
 import Timeline_flower_1 from '../timeline-flower-1.png';
 import Timeline_flower_2 from '../timeline-flower-2.png';
@@ -9,11 +10,16 @@ import Timeline_flower_3 from '../timeline-flower-3.png';
 
 import kapil_patrika from '../kapil-patrika.jpeg';
 import vaishnavi_patrika from '../vaishnavi-patrika.jpeg';
+import { isMarriageDone } from '../../helper/isMarraigeDone';
 
 export default {
     navBarDetails: {
         siteHeader: `Shubhamangala`,
-        menu: [
+        menu: isMarriageDone() ? [
+            { label: "HOME", href: "#header" },
+            { label: "COUPLE", href: "#couple" },
+            { label: "STORY", href: "#story" },
+        ] : [
             { label: "HOME", href: "#header" },
             { label: "COUPLE", href: "#couple" },
             { label: "STORY", href: "#story" },
@@ -26,14 +32,16 @@ export default {
         heading: `Save The Date`,
         subHeading: `We are getting married on March 14, 2026`,
         vaishnavi_name: `Vaishnavi Virkar`,
-        kapil_name: `Kapil Khursade`
+        kapil_name: `Kapil Khursade`,
+        congratulationsMessage: `“Thank you for celebrating our special day with us on 14 March 2026.”` 
     },
 
     countdownTimeText: {
         day: 'Days',
         hours: 'Hours',
         minutes: 'Minutes',
-        seconds: 'Seconds'
+        seconds: 'Seconds',
+        countdownCompletedMessage: 'Our forever begins'
     },
 
     coupleDetails: {
@@ -80,7 +88,48 @@ export default {
         subHeading: `How it all began...`
     },
 
-    timelineItems: [
+    timelineItems: isMarriageDone() ? [
+         {
+            image: Timeline_img_1,
+            floater: Timeline_flower_1,
+            floaterSide: 'right-50',
+            date: "04 Feb, 2024",
+            header: "💛How We Met",
+            detail: `It started with a simple hello.
+                What began as casual conversations slowly turned into something we both looked forward to every day.
+                Without any big moment or drama, we simply found comfort in each other — and that’s how it all began.`
+        },
+        {
+            image: Timeline_img_2,
+            floater: Timeline_flower_2,
+            floaterSide: 'left-50',
+            date: "11 Oct, 2024",
+            header: "💍The Decision",
+            detail: `There wasn’t confusion.
+                There wasn’t doubt.
+                Just two hearts that knew this felt right.
+                So we chose each other — not just for a moment, but for life`
+        },
+        {
+            image: Timeline_img_3,
+            floater: Timeline_flower_3,
+            floaterSide: 'right-50',
+            date: "20 Nov, 2025",
+            header: "✨ It’s Now Official",
+            detail: `With our families’ blessings and hearts full of excitement,
+                we finally set the date.
+                What started as “us” is now becoming “forever.”`
+        },
+        {
+            image: Timeline_img_4,
+            floater: Timeline_flower_3,
+            floaterSide: 'right-50',
+            date: "14 March, 2026",
+            header: "🥳 The Big Day",
+            detail: `The day we took our vows and celebrated our love with all of you.
+                It was a day filled with joy, laughter, and unforgettable memories.`
+        }
+    ] : [
         {
             image: Timeline_img_1,
             floater: Timeline_flower_1,

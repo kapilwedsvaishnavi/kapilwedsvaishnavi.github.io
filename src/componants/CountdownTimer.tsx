@@ -3,6 +3,7 @@ import Countdown from "react-countdown";
 import TimerFrame from "../ui/TimerFrame";
 import { motion, useInView } from "framer-motion";
 import { strings } from "../helper/strings";
+import { isMarriageDone } from "../helper/isMarraigeDone";
 
 interface CountdownTimerProps {
   direction?: "left" | "right" | "up" | "down" | "bottom";
@@ -29,7 +30,8 @@ function CountdownTimer({ direction = "bottom" }: CountdownTimerProps) {
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
-      return <h1>Congratulations</h1>;
+      //return <h5 className="text-md lg:text-3xl font-serif text-center text-black mt-4 playwrite-au-tas-wedding">{CountdownTimeText.countdownCompletedMessage}</h5>;
+      return null
     } else {
       return (
         <div className="grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-2 lg:grid-cols-4 lg:gap-20">
@@ -41,6 +43,10 @@ function CountdownTimer({ direction = "bottom" }: CountdownTimerProps) {
       );
     }
   };
+
+  if (isMarriageDone()) {
+    return null;
+  }
 
   return (
     <motion.section
@@ -58,7 +64,7 @@ function CountdownTimer({ direction = "bottom" }: CountdownTimerProps) {
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <Countdown date={"2026-03-14T07:00:00"} renderer={renderer} />
+      <Countdown date={"2026-03-14T12:40:00"} renderer={renderer} />
     </motion.section>
   );
 }

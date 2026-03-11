@@ -7,9 +7,10 @@ import Event from './componants/Event';
 import Footer from './componants/Footer';
 import { useState, useEffect } from 'react';
 import FallingPetals from './ui/FallingPetals';
+import { isMarriageDone } from './helper/isMarraigeDone';
 
 function App() {
-    // hard-coded initial value
+  // hard-coded initial value
   const [curLang, setCurLang] = useState<"en" | "mr">("en");
 
   // load saved lang from localStorage
@@ -18,7 +19,7 @@ function App() {
     if (saved) setCurLang(saved);
   }, []);
 
-    // toggle function
+  // toggle function
   const toggleLang = () => {
     const next = curLang === "en" ? "mr" : "en";
     setCurLang(next);
@@ -33,8 +34,11 @@ function App() {
       <CountdownTimer />
       <Couple />
       <OurStory />
-      <Rsvp />
-      <Event />
+      {isMarriageDone() ? null :
+        <>
+          <Rsvp />
+          <Event />
+        </>}
       <Footer />
 
       <button
